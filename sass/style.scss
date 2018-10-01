@@ -1,0 +1,57 @@
+$basic:#66cc99;
+$yellow:#ffff99;
+$lila:#8F8FBD;
+
+
+body {
+    margin-top: 100px;
+  }
+  
+  div {
+    margin: 10px auto;
+    text-align: center;
+    width: 1200px;
+  }
+  
+  p {
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 20px;
+    border: 1px solid $basic;
+    padding: 5px;
+    line-height: 20px;
+    border-radius: 5px;
+    &:hover {
+        background-color: $basic;
+        color: white;
+      }
+  }
+  
+  
+  span {
+    border: 2px solid $yellow;
+    display: inline-block;
+    font-size: 20px;
+    width: 160px;
+    line-height: 35px;
+    border-radius: 5px;
+    margin-right: 30px;
+    text-align: left;
+    padding-left: 8px;
+    padding-top: 4px;
+    background-color: $yellow;
+  }
+  
+  button {
+    line-height: 26px;
+    padding: 6px;
+    width: 40px;
+    margin: 0 5px;
+    border: 2px solid $lila;
+    font-size: 28px;
+    border-radius: 5px;
+    &:hover{
+        color: white;
+        background-color: $lila;
+      }
+  }
