@@ -67,18 +67,16 @@ var Counter = React.createClass({
 
     render: function () {
         return (
-            React.createElement('div', {},
-                React.createElement('p', {
-                    onClick: this.changeStatus
-                }, 'Status: ' + this.state.status),
-                React.createElement('span', {}, 'Licznik: ' + this.state.counter),
-                React.createElement('button', {
-                    onClick: this.increment
-                }, '+'),
-                React.createElement('button', {
-                    onClick: this.decrement
-                }, '-')
-            )
+            <div>
+                <div>
+                    <p> onClick={this.changeStatus}Status: {this.state.status}</p>
+                    <span>Licznik: {this.state.counter}}</span>
+                    <button onClick={this.increment}>+</button>
+                    <button onClick={this.decrement}>-</button>
+                </div>
+            </div>          
         );
     }
 });
+
+export default Counter;
