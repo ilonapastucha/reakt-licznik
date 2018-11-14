@@ -1,8 +1,15 @@
-var element = React.createElement('div', {},
-    React.createElement(Counter),
-    React.createElement(Counter),
-    React.createElement(Counter)
-);
+import React from 'react';
 
-
-ReactDOM.render(element, document.getElementById('app'));
+class App extends React.Component {
+    render() {
+      return ( 
+        <div>
+            {Counter}
+            {Counter}
+            {Counter}
+        </div>
+       )
+    }
+  }
+  
+ReactDOM.render(<App/>, document.getElementById('app'));
