@@ -1,10 +1,14 @@
-import React from 'react';
 class Counter extends React.Component {
-    getInitialState() {
-        return {
-            counter: 0,
-            status: 0
-        };
+    state = {
+        counter: 0,
+        status: 0
+    }
+
+    constructor(props) {
+        super(props);
+        this.changeStatus = this.changeStatus.bind(this);
+        this.increment = this.increment.bind(this);
+        this.decrement = this.decrement.bind(this);
     }
 
     increment() {
@@ -70,8 +74,8 @@ class Counter extends React.Component {
         return (
             <div>
                 <div>
-                    <p> onClick={this.changeStatus}Status: {this.state.status}</p>
-                    <span>Licznik: {this.state.counter}}</span>
+                    <p onClick={this.changeStatus}>Status: {this.state.status}</p>
+                    <span>Licznik: {this.state.counter}</span>
                     <button onClick={this.increment}>+</button>
                     <button onClick={this.decrement}>-</button>
                 </div>
@@ -79,5 +83,3 @@ class Counter extends React.Component {
         );
     }
 };
-
-export default Counter;
